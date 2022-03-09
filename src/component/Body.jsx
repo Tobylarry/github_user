@@ -208,7 +208,7 @@ export default function Body(props){
          <div className="top top2">
         <div className="imgg"><Image src={Search} /></div>
         <div><input className="inp" type="text" value={value} placeholder="Search Username... onChange={handleSubmit} /></div>
-        <div><Input className="btn" type="submit" placeholder="Search" onClick={display}/></div>
+        <div><button className="btn" onClick={display}> Search</button></div>
         </div>
         <div>
         <div className={bodyy}>
