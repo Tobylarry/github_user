@@ -35,8 +35,7 @@ export default function Body(props){
     const [atheme, setAtheme] = useState("app")
     const [bodyy, setBody] = useState('body1')
     const [sun, setSun] = useState([Sun])
-    const [placeholder, setPlaceholder] = useState('Search Username....')
-    const [err, setErr] = useState('')
+   
     
 
     const [theme2, setTheme2] = useState("LIGHT")
@@ -170,6 +169,8 @@ export default function Body(props){
                 case 12:
                     setMonth("December")
                     break;
+                default:
+                    setMonth("Month")
               }}
             setDay(day);
             setYear(year);
@@ -189,7 +190,7 @@ export default function Body(props){
         }else{
             setLocation(content.location)
         }
-        if(content.Login == null){
+        if(content.login == null){
             setLogin("handle")
         }else{
             setLogin(content.login)
@@ -206,7 +207,7 @@ export default function Body(props){
         </div>
          <div className="top top2">
         <div className="imgg"><Image src={Search} /></div>
-        <div><input className="inp" type="text" value={value} placeholder={placeholder} onChange={handleSubmit} /></div>
+        <div><input className="inp" type="text" value={value} placeholder="Search Username... onChange={handleSubmit} /></div>
         <div><Input className="btn" type="submit" placeholder="Search" onClick={display}/></div>
         </div>
         <div>
